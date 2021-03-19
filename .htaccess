@@ -1,0 +1,11 @@
+Options All -Indexes
+#php_value error_reporting 1
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+Redirect 301 /email/ https://neo63.ru/email
+
+ErrorDocument 404 https://www.neo63.ru/404
